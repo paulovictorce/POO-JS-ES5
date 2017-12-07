@@ -8,8 +8,30 @@
     <p>POO With JS ES5</p>
     <script>
         function Person() {
-            
+            this.name;
+            this.age;
+            this.height;
+
+            this.sayHello = function (name) {
+                console.log('Hello ' + name)
+            }
         }
+
+        var paulo = new Person()
+        paulo.name = 'Paulo Victor'
+        paulo.age = 29;
+        paulo.height = 1.73
+
+        var lais = new Person()
+        lais.name = 'Laís Nazario'
+        lais.age = 28
+        lais.height = 1.68
+
+        console.log(lais)
+        console.log(paulo)
+
+        paulo.sayHello(paulo.name)
+        lais.sayHello(lais.name)
     </script>
 
 </body>
