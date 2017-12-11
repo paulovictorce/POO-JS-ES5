@@ -8,30 +8,54 @@
     <p>POO With JS ES5</p>
     <script>
         function Person() {
-            this.name;
-            this.age;
-            this.height;
+            var name;
+            var age;
+            var height;
 
             this.sayHello = function (name) {
                 console.log('Hello ' + name)
             }
+
+            this.getName = function getName() {
+                return name;
+            }
+
+            this.setName = function setName(_name) {
+                name = _name;
+            }
+
+            this.getAge = function getAge() {
+                return age;
+            }
+
+            this.setAge = function setAge(_age) {
+                age = _age;
+            }
+
+            this.getHeight = function getHeight() {
+                return height;
+            }
+
+            this.setHeight = function setHeight(_height) {
+                height = _height;
+            }
         }
 
         var paulo = new Person()
-        paulo.name = 'Paulo Victor'
-        paulo.age = 29;
-        paulo.height = 1.73
+        paulo.setName("Paulo Victor")
+        paulo.setAge(29)
+        paulo.setHeight(1.73)
 
         var lais = new Person()
-        lais.name = 'Laís Nazario'
-        lais.age = 28
-        lais.height = 1.68
+        lais.setName('Laís Nazário')
+        lais.setAge(28)
+        lais.setHeight(1.68)
 
         console.log(lais)
         console.log(paulo)
 
-        paulo.sayHello(paulo.name)
-        lais.sayHello(lais.name)
+        paulo.sayHello(paulo.getName())
+        lais.sayHello(lais.getName())
     </script>
 
 </body>
