@@ -7,10 +7,10 @@
 <body>
     <p>POO With JS ES5</p>
     <script>
-        function Person() {
-            var name;
-            var age;
-            var height;
+        function Person(_name, _age, _height) {
+            var name = _name
+            var age = _age
+            var height = _height
 
             this.sayHello = function (name) {
                 console.log('Hello ' + name)
@@ -41,15 +41,8 @@
             }
         }
 
-        var paulo = new Person()
-        paulo.setName("Paulo Victor")
-        paulo.setAge(29)
-        paulo.setHeight(1.73)
-
-        var lais = new Person()
-        lais.setName('Laís Nazário')
-        lais.setAge(28)
-        lais.setHeight(1.68)
+        var paulo = new Person("Paulo Victor", 29, 1.73)
+        var lais = new Person("Laís Nazário", 28, 1.68)
 
         console.log(lais)
         console.log(paulo)
