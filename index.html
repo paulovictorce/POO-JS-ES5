@@ -41,14 +41,38 @@
             }
         }
 
+        function Employee(_name, _age, _height) {
+            var salary;
+            Person.call(this,_name, _age, _height)
+
+            this.happyBirthday = function () {
+                this.setAge(this.getAge()+1)
+            }
+
+            this.getSalary = function () {
+                return salary;
+            }
+
+            this.setSalary = function (_salary) {
+                salary = _salary;
+            }
+
+            Employee.prototype = Object.create(Person.prototype) //finalizando a herança por prototype
+        }
+
         var paulo = new Person("Paulo Victor", 29, 1.73)
         var lais = new Person("Laís Nazário", 28, 1.68)
+        var pluto = new Employee("Pluto",23,1.72)
 
-        console.log(lais)
-        console.log(paulo)
+        console.log(pluto.getAge())
+        pluto.happyBirthday();
+        console.log(pluto.getAge())
 
-        paulo.sayHello(paulo.getName())
-        lais.sayHello(lais.getName())
+        // console.log(lais)
+        // console.log(paulo)
+        //
+        // paulo.sayHello(paulo.getName())
+        // lais.sayHello(lais.getName())
     </script>
 
 </body>
