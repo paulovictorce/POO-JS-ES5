@@ -39,15 +39,15 @@
             this.setHeight = function setHeight(_height) {
                 height = _height;
             }
+
+            Person.prototype.happyBirthday = function () {
+                this.setAge(this.getAge()+1)
+            }
         }
 
         function Employee(_name, _age, _height) {
             var salary;
             Person.call(this,_name, _age, _height)
-
-            this.happyBirthday = function () {
-                this.setAge(this.getAge()+1)
-            }
 
             this.getSalary = function () {
                 return salary;
